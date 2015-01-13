@@ -1,0 +1,107 @@
+@import "../bower_components/normalize-scss/_normalize.scss";
+@import "../bower_components/typeplate-starter-kit/css/_typeplate.scss";
+@import "./mixins.scss";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
+/**
+ * BOX-SIZING
+ */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+/**
+ * GRIDS
+ */
+
+.grid {
+    width: 100%;
+    display: block;
+    font-size: 0;
+    text-align: justify;
+    position: relative;
+    & > * {
+        font-size: medium;
+        text-align: left;
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+    &:after {
+        display: inline-block;
+        width: 100%;
+        content: "";
+        font-size: medium;
+    }
+}
+@include gridify(2, 400);
+@include gridify(4, 600);
+/**
+ * GENERAL
+ */
+
+img {
+    max-width: 100;
+}
+body {
+    transition: opacity .25s ease;
+    margin: 100px;
+}
+.main {
+    position: relative;
+    background-color: transparent;
+    height: 400px;
+    width: auto;
+    margin-left: 100px;
+    padding-top: 200px;
+    ;
+}
+.timedate {
+    display: inline-block;
+    
+    width: 21%;
+    height: inherit;
+    position: absolute;
+    transform: translateX(-65px) translateY(-50%);
+    background-repeat: no-repeat;
+}
+.second {
+    display: inline-block;
+    position: relative;
+    min-width: 79%;
+    height: 200px;
+    transform: translateY(-200px);
+    color: white;
+    background-color: #84bdd7;
+    margin-bottom: 5px;
+}
+h1 {
+    border-bottom: 1px solid grey;
+    color: white;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+p {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.icon{
+    
+  background-color: #6495ED;
+  border: 4px solid #84bdd7;
+  border-radius: 100%;  
+  margin-top: 10px;
+}
+i{
+    transform: translate(17px,-1px);
+
+}
+.triangle{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 10px;
+    left: 0px;
+    transform: rotate(45deg);
+    background-color: #84bdd7;
+    z-index: -10;
+}
